@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/allPhotos">
+
+    <fragment
+        android:id="@+id/allPhotos"
+        android:name="com.tutorials.unsplashimages.AllPhotos"
+        android:label="fragment_all_photos"
+        tools:layout="@layout/fragment_all_photos" >
+        <action
+            android:id="@+id/action_allPhotos_to_viewPhoto"
+            app:destination="@id/viewPhoto" />
+        <action
+            android:id="@+id/action_allPhotos_to_searchPhotos"
+            app:destination="@id/searchPhotos" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchPhotos"
+        android:name="com.tutorials.unsplashimages.SearchPhotos"
+        android:label="fragment_search_photos"
+        tools:layout="@layout/fragment_search_photos" >
+        <action
+            android:id="@+id/action_searchPhotos_to_viewPhoto"
+            app:destination="@id/viewPhoto" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPhoto"
+        android:name="com.tutorials.unsplashimages.ViewPhoto"
+        android:label="fragment_view_photo"
+        tools:layout="@layout/fragment_view_photo" >
+        <argument
+            android:name="imageBody"
+            app:argType="com.tutorials.unsplashimages.model.ImageBody" />
+    </fragment>
+</navigation>

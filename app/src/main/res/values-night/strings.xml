@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wallpapers_text">Wallpapers</string>
+    <string name="empty_text">text here</string>
+    <string name="search_header_text">Search Photo</string>
+</resources>
