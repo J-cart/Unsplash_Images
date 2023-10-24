@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/allPhotos"
-        android:name="com.tutorials.unsplashimages.AllPhotos"
+        android:name="com.tutorials.unsplashimages.ui.AllPhotos"
         android:label="fragment_all_photos"
         tools:layout="@layout/fragment_all_photos" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchPhotos"
-        android:name="com.tutorials.unsplashimages.SearchPhotos"
+        android:name="com.tutorials.unsplashimages.ui.SearchPhotos"
         android:label="fragment_search_photos"
         tools:layout="@layout/fragment_search_photos" >
         <action
@@ -28,11 +28,11 @@
     </fragment>
     <fragment
         android:id="@+id/viewPhoto"
-        android:name="com.tutorials.unsplashimages.ViewPhoto"
+        android:name="com.tutorials.unsplashimages.ui.ViewPhoto"
         android:label="fragment_view_photo"
         tools:layout="@layout/fragment_view_photo" >
         <argument
             android:name="imageBody"
-            app:argType="com.tutorials.unsplashimages.model.ImageBody" />
+            app:argType="com.tutorials.unsplashimages.data.model.ImageBody" />
     </fragment>
 </navigation>

@@ -4,13 +4,13 @@ import android.content.Context
 import androidx.room.Room
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import com.tutorials.unsplashimages.BASE_URL
-import com.tutorials.unsplashimages.PHOTOS_DATABASE_NAME
-import com.tutorials.unsplashimages.arch.PhotoRepositoryImpl
-import com.tutorials.unsplashimages.arch.PhotosRepository
-import com.tutorials.unsplashimages.db.PhotoDatabase
-import com.tutorials.unsplashimages.db.PhotosApiService
-import com.tutorials.unsplashimages.db.PhotosDao
+import com.tutorials.unsplashimages.data.PhotoRepositoryImpl
+import com.tutorials.unsplashimages.data.PhotosRepository
+import com.tutorials.unsplashimages.data.local.PhotoDatabase
+import com.tutorials.unsplashimages.data.local.dao.PhotosDao
+import com.tutorials.unsplashimages.data.remote.PhotosApiService
+import com.tutorials.unsplashimages.util.BASE_URL
+import com.tutorials.unsplashimages.util.PHOTOS_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -46,7 +46,7 @@ object AppModule {
     @Provides
     fun getOkhttp(): OkHttpClient {
         val logging = HttpLoggingInterceptor()
-        logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         val client = OkHttpClient.Builder()
             .addInterceptor(logging)
             .addInterceptor { chain ->
