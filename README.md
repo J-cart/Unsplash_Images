@@ -15,7 +15,8 @@
 
 
 ## Demo
-   .....
+You can check out the app here
+  [Appetize.io](https://appetize.io/app/xj75kmhaefwhyyl647h4qzjpky?device=pixel7&osVersion=13.0)
 ## Download
  Coming Soon .....
 <img src="/previews/preview.gif" align="right" width="320"/>
