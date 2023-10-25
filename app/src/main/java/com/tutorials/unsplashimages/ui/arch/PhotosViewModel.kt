@@ -50,7 +50,7 @@ class PhotosViewModel @Inject constructor(
         searchQuery.value = query
     }
 
-    val pagingSearchNews = searchQuery.switchMap { query ->
+    val pagingSearchPhotos = searchQuery.switchMap { query ->
         repository.getPagingSearchImages(query).cachedIn(viewModelScope)
     }
 

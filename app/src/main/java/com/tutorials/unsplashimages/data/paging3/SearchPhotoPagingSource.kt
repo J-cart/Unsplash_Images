@@ -26,7 +26,7 @@ class SearchPhotoPagingSource(
             var realResult = emptyList<ImageBody>()
 
             result?.let {
-                realResult = it
+                realResult = it.results
             }
             LoadResult.Page(
                 data = realResult,
@@ -37,6 +37,8 @@ class SearchPhotoPagingSource(
             LoadResult.Error(e)
 
         }catch (e: HttpException){
+            LoadResult.Error(e)
+        }catch (e: Exception){
             LoadResult.Error(e)
         }
     }

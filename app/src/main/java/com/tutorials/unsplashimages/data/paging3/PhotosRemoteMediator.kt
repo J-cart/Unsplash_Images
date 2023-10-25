@@ -1,5 +1,6 @@
 package com.tutorials.unsplashimages.data.paging3
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -46,6 +47,7 @@ class PhotosRemoteMediator(
 
             val response = api.getAllPhotos(page = currentPage)
             val endOfPaginationReached = response.body()?.isEmpty()
+            Log.d("JOE", "load: ${response.body()?.size}")
 
             val prevPage = if (currentPage == 1) null else currentPage - 1
             val nextPage = if (endOfPaginationReached!!) null else currentPage + 1

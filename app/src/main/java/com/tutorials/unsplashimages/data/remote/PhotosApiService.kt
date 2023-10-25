@@ -1,6 +1,7 @@
 package com.tutorials.unsplashimages.data.remote
 
 import com.tutorials.unsplashimages.data.model.ImageBody
+import com.tutorials.unsplashimages.data.model.ImageResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -23,5 +24,5 @@ interface PhotosApiService {
         page: Int,
         @Query("per_page")
         perPage: Int = 20
-    ): Response<List<ImageBody>>
+    ): Response<ImageResponse>
 }

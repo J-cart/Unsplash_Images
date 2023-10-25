@@ -2,5 +2,5 @@
 <resources>
     <string name="wallpapers_text">Wallpapers</string>
     <string name="empty_text">text here</string>
-    <string name="search_header_text">Search Photo</string>
+    <string name="search_header_text">Search Wallpaper</string>
 </resources>
