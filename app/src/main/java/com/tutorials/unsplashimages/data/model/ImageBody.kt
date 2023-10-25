@@ -16,4 +16,8 @@ data class ImageBody(
     val id:String,
     @SerializedName("urls")
     val urls: ImageUrl,
+    @SerializedName("user")
+    val user: ImageUser,
+    @SerializedName("likes")
+    val likes: Int,
 ):Parcelable

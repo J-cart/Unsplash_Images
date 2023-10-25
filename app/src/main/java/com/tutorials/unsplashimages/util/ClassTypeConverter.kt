@@ -1,7 +1,6 @@
 package com.tutorials.unsplashimages.util
 
 import androidx.room.TypeConverter
-import com.tutorials.unsplashimages.data.model.ImageLocation
 import com.tutorials.unsplashimages.data.model.ImageUrl
 import com.tutorials.unsplashimages.data.model.ImageUser
 import org.json.JSONObject
@@ -23,16 +22,6 @@ class ClassTypeConverter {
         val regular = jsonObject.get("regular") as String
         return ImageUrl(raw = raw,regular = regular)
     }
-
-    @TypeConverter
-    fun fromImageLocation(imageLocation: ImageLocation):String{
-        return imageLocation.city
-    }
-
-    @TypeConverter
-    fun toImageLocation(name:String): ImageLocation {
-        return ImageLocation(name)
-    }
     @TypeConverter
     fun fromImageUser(user: ImageUser):String{
         return user.username
@@ -40,6 +29,6 @@ class ClassTypeConverter {
 
     @TypeConverter
     fun toImageUser(name:String): ImageUser {
-        return ImageUser(name)
+        return ImageUser(name,name,name,name,)
     }
 }

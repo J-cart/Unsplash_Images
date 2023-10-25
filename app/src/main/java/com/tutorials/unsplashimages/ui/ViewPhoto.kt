@@ -36,6 +36,8 @@ class ViewPhoto : Fragment() {
             backBtn.setOnClickListener {
                 findNavController().navigateUp()
             }
+            authorText.text = imageBody.user.username
+            likesText.text = imageBody.likes.toString()
         }
     }
 

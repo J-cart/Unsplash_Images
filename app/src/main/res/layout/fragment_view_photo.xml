@@ -8,6 +8,58 @@
     android:background="@color/black"
     tools:context=".ui.ViewPhoto">
 
+
+
+    <ImageView
+        android:id="@+id/image_src"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/dia_cooking" />
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/author_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/profile_icon"
+            android:drawablePadding="6dp"
+            android:text="@string/empty_text"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/likes_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/like_icon"
+            android:drawablePadding="6dp"
+            android:text="@string/empty_text"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"
+            />
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/back_btn"
         android:layout_width="70dp"
@@ -21,16 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/white" />
-
-    <ImageView
-        android:id="@+id/image_src"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/dia_cooking" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
