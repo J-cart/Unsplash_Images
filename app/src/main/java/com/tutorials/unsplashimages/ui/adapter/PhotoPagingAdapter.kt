@@ -25,7 +25,7 @@ class PhotoPagingAdapter : PagingDataAdapter<ImageBody, PhotoPagingAdapter.ViewH
                 root.clipToOutline = true
                 imageSrc.load(image.urls.raw) {
                     placeholder(R.drawable.loading_anim)
-                    error(R.drawable.ic_launcher_foreground)
+                    error(R.drawable.image_icon_small)
                 }
                 root.setOnClickListener {
                     listener?.let {

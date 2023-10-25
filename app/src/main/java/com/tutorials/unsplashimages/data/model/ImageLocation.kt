@@ -7,5 +7,5 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class ImageLocation (
     @SerializedName("city")
-    val name:String
+    val city:String
 ): Parcelable

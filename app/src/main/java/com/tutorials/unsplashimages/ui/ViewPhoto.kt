@@ -31,7 +31,7 @@ class ViewPhoto : Fragment() {
         binding.apply {
             imageSrc.load(imageBody.urls.regular) {
                 placeholder(R.drawable.loading_anim)
-                error(R.drawable.ic_launcher_foreground)
+                error(R.drawable.image_icon)
             }
             backBtn.setOnClickListener {
                 findNavController().navigateUp()

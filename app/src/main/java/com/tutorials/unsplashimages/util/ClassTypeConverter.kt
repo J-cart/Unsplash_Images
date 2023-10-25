@@ -26,7 +26,7 @@ class ClassTypeConverter {
 
     @TypeConverter
     fun fromImageLocation(imageLocation: ImageLocation):String{
-        return imageLocation.name
+        return imageLocation.city
     }
 
     @TypeConverter
