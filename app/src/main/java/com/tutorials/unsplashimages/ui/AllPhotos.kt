@@ -50,7 +50,7 @@ class AllPhotos : Fragment() {
             binding.swipeToRefresh.isRefreshing = false
         }
 
-        /*lifecycleScope.launch {
+        lifecycleScope.launch {
             viewModel.homeFirstRun.collect{
                 if (it){
                     viewModel.toggleHomeFirstRun(false)
@@ -58,7 +58,7 @@ class AllPhotos : Fragment() {
 
                 }
             }
-        }*/
+        }
         //region PAGING3
         binding.apply {
             imagesRv.adapter = pagingAdapter.withLoadStateHeaderAndFooter(
@@ -117,7 +117,7 @@ class AllPhotos : Fragment() {
 
         }
 
-        viewModel.getRemoteMediatorPhotos()
+//        viewModel.getRemoteMediatorPhotos()
         observeRemoteMediator()
 
 
@@ -125,6 +125,11 @@ class AllPhotos : Fragment() {
             val route = AllPhotosDirections.actionAllPhotosToViewPhoto(
                 imageBody
             )
+            findNavController().navigate(route)
+        }
+
+        binding.searchPlate.setOnClickListener {
+            val route = AllPhotosDirections.actionAllPhotosToSearchPhotos()
             findNavController().navigate(route)
         }
         //endregion

@@ -59,7 +59,7 @@ class PhotosViewModel @Inject constructor(
 
 
     fun getRemoteMediatorPhotos() {
-        remoteMediatorPhotos.value = repository.getMediatorPagingImages().asFlow()
+        remoteMediatorPhotos.value = repository.getMediatorPagingImages().asFlow().cachedIn(viewModelScope)
     }
 
     fun toggleHomeFirstRun(value: Boolean) {

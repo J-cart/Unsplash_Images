@@ -10,7 +10,7 @@ import kotlinx.parcelize.Parcelize
 @Entity(tableName = "Images")
 @Parcelize
 data class ImageBody(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val key:Int = 0,
     @SerializedName("id")
     val id:String,

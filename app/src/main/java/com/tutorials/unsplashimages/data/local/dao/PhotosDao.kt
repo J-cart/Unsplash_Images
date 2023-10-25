@@ -15,6 +15,9 @@ interface PhotosDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(images: List<ImageBody>)
 
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertImage(images: ImageBody)
+
     @Query("SELECT * FROM Images")
     fun getAllMediatorImages(): PagingSource<Int, ImageBody>
 
